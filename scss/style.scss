@@ -1,0 +1,393 @@
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+
+/*-------== Mixin ==-------*/
+
+
+@mixin offcanvas-link{
+    a {
+        text-decoration: none;
+        color: rgba(101, 101, 101, 0.836);
+    }
+}    
+
+
+@mixin offcanvas-list{ 
+    ul {
+        list-style: none;
+        border-left: 1px solid #ddd;
+        margin-left: 10px;
+    }
+}
+
+
+@mixin offcanvas-component-padding{
+    .offcanvas-component {
+        padding: 20px 0;
+    }
+}
+
+
+@mixin accordion-styles{
+    .accordion {
+        --bs-accordion-active-color: none !important;
+        --bs-accordion-border-color: none !important;
+        --bs-accordion-active-bg: none !important;
+        --bs-accordion-border-color: none !important;
+
+        --bs-accordion-btn-icon: url("../images/plus-sign.svg");
+        --bs-accordion-btn-active-icon: url("../images/minus-sign.svg");
+    }
+
+    .accordion-button {
+        padding: 16px 0; 
+    }
+    
+    .accordion-body {
+        padding: 0 0;
+    }
+   
+}
+
+
+html{
+    // background-color: black;
+}
+
+
+
+
+
+.header-wrapper{
+    display: block;
+}
+
+
+
+.container-wrapper{
+    @extend body;
+    height: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+
+
+.promotion-banner{
+    height:44.8px;
+    
+    display:flex;
+    justify-content: center;
+    
+}
+
+
+
+.banner-label{
+    color: white;
+    font-size: 14px;
+    height: 100%;
+
+    @extend .d-flex;
+    @extend .justify-content-center;
+    @extend .align-items-center;
+}
+
+
+
+.banner-container{
+    width: 500px
+}
+
+
+
+.promotion-banner .container-wrapper{
+    height: 100%;
+    width: 500px;
+
+    @extend .d-flex;
+    @extend .justify-content-evenly;
+}
+
+.btn-primary{
+    --bs-btn-bg: none;
+    --bs-btn-color: black;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-color: black;
+    --bs-btn-active-bg: none;
+}
+
+
+
+.container-side-menu{
+    @extend .border-bottom;
+    @extend .container;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    .btn-primary{
+        padding-left: 0;
+    }
+}
+
+
+
+
+.navigation-banner {
+    background-color: rgb(255, 255, 255);
+    height: 78.38px;
+}
+
+  
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+  
+
+
+
+
+
+
+
+.navigation-banner .container-wrapper{
+    height: 100%;
+    @extend .d-flex;
+    @extend .justify-content-evenly;
+}
+
+
+.navigation-banner .row{
+    height:100%;
+    padding-right: 0;
+    --bs-gutter-x: 0;
+    // margin: 0 -1.5rem;
+}
+
+.navigation-banner .container{
+    --bs-gutter-x: 0
+}
+
+
+.navigation-label{
+    @extend .banner-label;
+    padding: 0;
+    width: 100px;
+}
+
+
+.icon-menu-left{
+    @extend .col-sm;
+    display:flex;
+    justify-content: start;
+}
+
+
+.icon-menu-right{
+    @extend .col-sm;
+    display:flex;
+    justify-content: end;
+}
+
+
+
+
+.navigation-list{
+    padding:0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+
+.accordion-static-button{
+    @extend .accordion-button;
+}
+
+.accordion-static-button::after{
+    width: 0;
+    height: 0;
+}
+
+
+.accordion-static-button.accordion{
+    @extend .accordion-button
+}
+
+
+
+
+
+.navbar-toggler-icon{
+    background-image: url(../images/hamburger-menu.svg);
+}
+
+
+.sidebar-toggler{
+    @extend .btn-primary;
+
+    --bs-btn-bg: rgba(210, 210, 210, 0.45);
+    --bs-btn-active-bg: none;
+    --bs-btn-border-color:none;
+}
+// .offcanvas-body{
+//     a{
+//         text-decoration: none;
+//         color:rgba(101, 101, 101, 0.836)
+//     }
+
+
+
+//     ul{
+//         list-style: none;
+//         border-left: 1px solid #ddd;
+//         margin-left: 10px;
+//     }
+
+
+
+//     .offcanvas-component{
+//         padding: 16px 0;
+//     }
+
+
+
+//     .accordion{
+//         --bs-accordion-active-color: none !important;
+//         --bs-accordion-border-color: none !important;
+//         --bs-accordion-active-bg: none !important;
+//         --bs-accordion-btn-icon: url("../images/plus-sign.svg");
+//         --bs-accordion-btn-active-icon: url("../images/minus-sign.svg");
+//     }
+
+
+//     .accordion-button{
+//         padding: 16px 0; 
+//     }
+
+
+//     .accordion-body{
+//         padding: 0 0;
+//     }
+
+
+
+//     .accordion-item a{
+//         color: rgb(0, 0, 0) !important;
+//         .accordion-button{
+//             color: rgba(0,0,0)
+//         }
+
+//         .show{
+            
+//             color: rgba(0,0,0) !important
+//         }
+//     }
+// }
+
+
+
+
+/*--v--| SIDEBAR |--v--*/
+
+
+/* animation overrides */
+.active{
+    @extend .show;      /* override show class */
+    @extend .showing;   /* override showing class */
+    @extend .hiding;    /* override hiding class */
+
+    .offcanvas-1{ 
+        transition: none;
+    }
+}
+
+
+
+.main-menu-component{
+    z-index: 20;
+}
+
+.sub-menu-component{
+    width: 800px !important; 
+    padding-left: 400px;
+    z-index: 1;
+}
+
+
+
+
+.offcanvas-header{
+    display: block !important;
+    width: 0;
+    padding: 20px 20px;
+    margin-left: -7px;
+    margin-bottom: -24px;
+    .btn-close{
+        @extend .btn-close;
+        padding-left: 0;
+    }
+}
+
+
+.row > *{
+    padding-left : 0;
+}
+
+
+.accordion-header{
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    line-height: var(--bs-body-line-height);
+    // @extend 
+}
+
+
+.offcanvas-body {
+    @include offcanvas-link;
+    @include offcanvas-list;
+
+
+
+
+    .offcanvas-component {
+        padding: 20px 0;
+    }
+
+    .accordion {
+        @include accordion-styles;
+        --bs-accordion-border-color: none !important;
+        --bs-accordion-active-color: none !important;
+        --bs-accordion-border-color: none !important;
+        --bs-accordion-active-bg: none !important;
+    }
+
+    .accordion-item {
+        a {
+            color: rgb(0, 0, 0) !important;
+        }
+    }
+
+    .accordion-button{
+        box-shadow: none !important;
+        padding: 20px 0 !important;
+        margin: 8px 0;
+    }
+}
+
+.offcanvas-subbody{
+    @extend .offcanvas-body;
+    margin-top: 35px;
+}
+
+
+
+/*--^--| SIDEBAR |--^--*/
+
+
+// font-family: --bs-body-font-family: var(--bs-font-sans-serif);
+// font-size: --bs-body-font-size: 1rem;
+// line-height: line-height

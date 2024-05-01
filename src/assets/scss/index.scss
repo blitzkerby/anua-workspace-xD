@@ -1,0 +1,224 @@
+@use './header.scss' as custom-accordion-styles; // Assuming the file is named mixins.scss
+
+@mixin square-button-style{
+  .btn{
+    background-color: black;
+    border-radius: 0;
+    width:169px;
+    height:45px;
+    font-size: 14px;
+    color: white;
+  }
+}
+
+
+*
+*::before ,
+*::after  {
+    margin  :  0;
+    padding :  0;
+
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    
+    
+}
+
+body{
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+
+
+
+
+
+//--v-- hero section --v--
+.hero-section{
+  max-height: 964px;
+  background-color: beige;
+
+
+  img{
+    max-height: inherit;
+    width: inherit;
+    height: auto;
+    position: relative;
+  }
+  // background: url("../images/home/Anua-main-banner.webp") center no-repeat;
+  // background-size: cover;
+
+
+  .container-wrapper{
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: none !important;
+
+    display:flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+
+    .row{
+      margin: 0 !important;
+    }
+  }
+
+  .container-inner{
+    position: absolute;
+    width: 100%;
+    max-width: 444.77px !important;
+    padding: 28px;
+    // height: 138.58px;
+
+
+    .display-notice{
+      display: flex;
+      line-height: 1.5;
+      font-size: 15.4px;
+
+      em{
+        font-weight: 700;
+        margin-right: 5px;
+      }
+    }
+
+    .display-slogan{
+      font-size: 34.2px;
+      font-weight: 600;
+      letter-spacing: -0.5px;
+      padding: 0;
+      display: flex;
+    }
+  }
+
+  @include square-button-style;
+}
+
+
+
+//--^-- hero section --^--
+
+
+
+//--v-- product showcase section --v--
+.product-showcase{
+  height: 816px;
+  background-color: blanchedalmond;
+}
+//--v-- product showcase section --v--
+
+
+
+//--v-- two-columns section --v--
+.two-columns{
+  @include square-button-style;
+
+  *{
+    padding-right: 0;
+  }
+  
+  
+  height: 917px;
+  background-color: aliceblue;
+
+  .container{
+    max-width: none;
+    padding: 0;
+  }
+
+  .container-fluid{
+    padding: 0;
+  }
+
+
+  .col{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button{
+      position: absolute
+    }
+
+    img{
+      height: auto;
+      width: inherit;
+    }
+  }
+  .row{
+    margin: 0 !important;
+  }
+}
+//--^-- two-columns section --^--
+
+
+
+
+//--v-- anua's original --v--
+.anua-original{
+  height: 485px;
+  background-color: azure;
+}
+//--^-- anua's original --^--
+
+
+
+
+//--v-- radiant serum duo --v--
+.radiant-serum-duo{
+  height: 685px;
+  background-color: floralwhite;
+}
+//--^-- radiant serum duo --^--
+
+
+
+
+
+
+//--v-- help faq --v--
+
+.help-faq{
+  height: 401px;
+  background-color: tan;
+  margin: 64px 0;
+
+  @include custom-accordion-styles.accordion-styles;
+
+
+  border-color: grey;
+  
+
+  .accordion-display{
+    font-size: 19.4px;
+    font-weight: 500;
+    padding: 24px 0;
+  }
+
+  .accordion-button{
+    font-size: 17px;
+    font-weight: 400;
+    padding: 24px 0;
+  }
+
+  .accordion-body{
+    font-size: 15px;
+  }
+
+  .container{
+    width:650px;
+  }
+}
+
+//--^-- help faq --^--
+
+
+
+
+.title-heading{
+  font-weight: 600;
+  font-size: 35.2px;
+}

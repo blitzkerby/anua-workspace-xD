@@ -1,0 +1,119 @@
+.inner-footer {
+  row-gap: 3rem;
+  display: grid;
+}
+
+.inner-block {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  display: flex;
+}
+
+.inner-stack {
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  row-gap: 1rem;
+  display: grid;
+}
+
+.inner-stack .list-style a:hover {
+  color: #000;
+}
+
+h6 {
+  font-family: “Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif”;
+}
+
+.list-style {
+  margin: 2.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list-style li a {
+  color: #1c1c1ca6;
+  font-family: “Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif”;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.list-style > li {
+  margin-top: .625rem;
+}
+
+.inner-stack img {
+  margin-top: 3rem;
+}
+
+.icon-footer svg {
+  fill: gray;
+  margin: .75rem;
+}
+
+.icon-footer a {
+  text-decoration: none;
+}
+
+.icon-footer svg:hover {
+  fill: #000;
+}
+
+.sub-footer {
+  font-family: “Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif”;
+  font-size: 11px;
+}
+
+@media screen and (width <= 700px) {
+  .inner-block {
+    display: block;
+  }
+
+  .sub-footer {
+    text-align: center;
+  }
+}
+
+.footer-input {
+  padding: 10.4px 12.8px;
+  font-family: “Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif”;
+}
+
+#footer-uper-email {
+  color: #1c1c1ca6;
+}
+
+.footer-btn-bg-fadeout {
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+  border: 1px solid #9c9c9c;
+  border-radius: 2px;
+  padding: 9.1px 133px;
+  font-family: “Helvetica, Helvetica Neue, Arial, Lucida Grande, sans-serif”;
+  font-size: 14px;
+  transition: all .8s ease-out;
+  box-shadow: inset 0 0 #fff;
+}
+
+.footer-btn-bg-fadeout:hover {
+  color: #000;
+  box-shadow: inset 700px 0 #fff;
+}
+
+.fix-logo {
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: flex-end;
+  display: flex;
+}
+
+.fix-logo button {
+  background-color: #000;
+  width: 44px;
+  height: 44px;
+  margin: 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+/*# sourceMappingURL=index.f8675873.css.map */

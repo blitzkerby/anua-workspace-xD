@@ -1,0 +1,113 @@
+
+  .inner-footer{
+      display: grid;
+      row-gap: 3rem;
+  }
+  .inner-block{
+      justify-content: space-between;
+      flex-wrap: wrap;
+      display: flex;
+  }
+  .inner-stack{
+      /* margin-top: 0.625rem;
+      margin-bottom: 0.625rem; */
+      row-gap: 1rem;
+      grid-template-columns: minmax(0, 1fr);
+      align-content: start;
+      display: grid;
+  }
+  .inner-stack .list-style a:hover{
+    color: black;
+  }
+  h6{
+      font-family:“Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif”;
+  }
+  .list-style{
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      margin-top: 2.5rem;
+  }
+  .list-style li a{
+      color: #1C1C1CA6;
+      font-size: 15px;
+      font-family:“Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif”;
+      text-decoration: none;
+  }
+  .list-style > li{
+      margin-top: 0.625rem;
+      
+  }
+  .inner-stack img{
+      margin-top: 3rem;
+  }
+  .icon-footer svg{
+      margin: .75rem;
+      fill: gray;
+  }
+  .icon-footer a{
+    text-decoration: none;
+  }
+  .icon-footer svg:hover{
+    fill: black;
+    
+  }
+  .sub-footer{
+      font-size: 11px ;
+      font-family:“Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif”;
+  }
+
+   @media screen and (max-width: 700px) {
+      .inner-block{
+      display: block;
+  }
+  }
+  @media screen and (max-width: 700px) {
+      .sub-footer{
+          text-align: center;
+  }
+  }
+.footer-input{
+padding: 10.4px 12.8px;
+font-family:“Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif” ;
+}
+#footer-uper-email{
+color: #1C1C1CA6;
+}
+.footer-btn-bg-fadeout {
+    font-size: 14px;
+    font-family:“Helvetica, 'Helvetica Neue', Arial, 'Lucida Grande', sans-serif” ;
+    text-align: center;
+    padding: 9.1px 133px;
+    color: white;
+    background-color: black;
+    border-radius: 2px;
+    border: 1px solid #9c9c9c;
+    /* Initial shadow at the left */
+    box-shadow: 0 0 0 0 white inset;
+    /* Set transition to .3 second */
+    transition: ease-out .8s;
+  }
+
+  .footer-btn-bg-fadeout:hover {
+    /* Move shadow to the right equal button width*/
+    box-shadow: 700px 0 0 0 white inset;
+    /* Change text color */
+    color: black;
+  }
+  .fix-logo{
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: end;
+  }
+  .fix-logo button{
+    width: 44px;
+    height: 44px;
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+  }

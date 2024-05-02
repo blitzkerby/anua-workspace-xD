@@ -584,7 +584,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"7HwTx":[function(require,module,exports) {
-// import * as bootstrap from 'bootstrap'
+var _bootstrap = require("bootstrap");
 //--------*--------sidebar--------*--------
 const sidebarToggle = document.getElementById("sidebar-toggle");
 const sidebarCloseBtn = document.getElementById("sidebar-close-btn");
@@ -626,6 +626,6 @@ aboutToggle.addEventListener("click", ()=>{
  //--------*-------INJECTION--------*-------
 ;
 
-},{}]},["8btyO","7HwTx"], "7HwTx", "parcelRequire9fd8")
+},{"bootstrap":"h36JB"}]},["8btyO","7HwTx"], "7HwTx", "parcelRequire9fd8")
 
 //# sourceMappingURL=index.b25c5258.js.map

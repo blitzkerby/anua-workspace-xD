@@ -1,0 +1,460 @@
+/*----== ROOT ==----*/
+:root {
+    --bs-accordion-btn-icon: url("/src/assets/images/header/plus-sign.svg");
+    --bs-accordion-btn-active-icon: url("/src/assets/images/header/minus-sign.svg");
+}
+
+/*-------== Mixin ==-------*/
+* *::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.btn-primary,
+.sidebar-toggler {
+    --bs-btn-bg: none;
+    --bs-btn-color: black;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-bg: none;
+    --bs-btn-hover-color: black;
+    --bs-btn-active-bg: none;
+}
+
+header {
+    z-index: 100;
+}
+
+.header-wrapper {
+    display: block;
+}
+
+.container-wrapper {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.promotion-banner {
+    height: 44.8px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-label,
+.navigation-label {
+    color: white;
+    font-size: 14px;
+    height: 100%;
+    font-weight: 10;
+}
+
+.banner-container {
+    width: 500px;
+}
+
+.promotion-banner .container-wrapper {
+    height: 100%;
+    width: 100%;
+    max-width: 650px;
+    justify-content: space-between !important;
+}
+
+.container-side-menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.container-side-menu .btn-primary,
+.container-side-menu .sidebar-toggler {
+    padding-left: 0;
+}
+
+.navigation-banner {
+    background-color: rgb(255, 255, 255);
+    height: 78.38px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.navigation-banner .container-wrapper {
+    height: 100%;
+}
+
+.navigation-banner .row {
+    height: 100%;
+    padding-right: 0;
+    --bs-gutter-x: 0;
+}
+
+.navigation-banner .container,
+.navigation-banner .container-side-menu {
+    --bs-gutter-x: 0;
+    max-width: none;
+}
+
+.navigation-label {
+    padding: 0;
+    width: 100px;
+}
+
+.icon-menu-left {
+    display: flex;
+    justify-content: start;
+}
+
+.icon-menu-right {
+    display: flex;
+    justify-content: end;
+}
+
+.navigation-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.accordion-static-button::after {
+    width: 0;
+    height: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: url(../images/header/hamburger-menu.svg);
+}
+
+.sidebar-toggler {
+    --bs-btn-bg: rgba(210, 210, 210, 0.45);
+    --bs-btn-active-bg: none;
+    --bs-btn-border-color: none;
+}
+
+/*--v--| SIDEBAR |--v--*/
+/* animation overrides */
+.active {
+    /* override show class */
+    /* override showing class */
+    /* override hiding class */
+}
+
+.active .offcanvas-1 {
+    transition: none;
+}
+
+.main-menu-component {
+    z-index: 20;
+}
+
+.sub-menu-component {
+    width: 800px !important;
+    padding-left: 400px;
+    z-index: 1;
+}
+
+.offcanvas-header {
+    display: block !important;
+    width: 0;
+    padding: 20px 20px;
+    margin-left: -7px;
+    margin-bottom: -24px;
+}
+
+.offcanvas-header .btn-close {
+    padding-left: 0;
+}
+
+.row>* {
+    padding-left: 0;
+}
+
+.accordion-header {
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    line-height: var(--bs-body-line-height);
+}
+
+.offcanvas-body a,
+.offcanvas-subbody a {
+    text-decoration: none;
+    color: rgba(101, 101, 101, 0.836);
+}
+
+.offcanvas-body ul,
+.offcanvas-subbody ul {
+    list-style: none;
+    border-left: 1px solid #ddd;
+    margin-left: 10px;
+}
+
+.offcanvas-body .offcanvas-component,
+.offcanvas-subbody .offcanvas-component {
+    padding: 20px 0;
+}
+
+.offcanvas-body .accordion,
+.offcanvas-subbody .accordion {
+    --bs-accordion-border-color: none !important;
+    --bs-accordion-active-color: none !important;
+    --bs-accordion-border-color: none !important;
+    --bs-accordion-active-bg: none !important;
+}
+
+.offcanvas-body .accordion .accordion,
+.offcanvas-subbody .accordion .accordion {
+    --bs-accordion-active-color: none !important;
+    --bs-accordion-border-color: none !important;
+    --bs-accordion-active-bg: none !important;
+    --bs-accordion-border-color: none !important;
+}
+
+.offcanvas-body .accordion .accordion-button,
+.offcanvas-subbody .accordion .accordion-button,
+.offcanvas-body .accordion .accordion-static-button,
+.offcanvas-subbody .accordion .accordion-static-button {
+    padding: 16px 0;
+}
+
+.offcanvas-body .accordion .accordion-body,
+.offcanvas-subbody .accordion .accordion-body {
+    padding: 0 0;
+}
+
+.offcanvas-body .accordion-item a,
+.offcanvas-subbody .accordion-item a {
+    color: rgb(0, 0, 0) !important;
+}
+
+.offcanvas-body .accordion-button,
+.offcanvas-subbody .accordion-button,
+.offcanvas-body .accordion-static-button,
+.offcanvas-subbody .accordion-static-button {
+    box-shadow: none !important;
+    padding: 20px 0 !important;
+    margin: 8px 0;
+}
+
+.offcanvas-subbody {
+    margin-top: 35px;
+}
+
+/*--^--| SIDEBAR |--^--*/
+* *::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.hero-section {
+    max-height: 964px;
+    background-color: beige;
+}
+
+.hero-section img {
+    max-height: inherit;
+    width: inherit;
+    height: auto;
+    position: relative;
+}
+
+.hero-section .container-wrapper {
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: none !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.hero-section .container-wrapper .row {
+    margin: 0 !important;
+}
+
+.hero-section .container-inner {
+    position: absolute;
+    width: 100%;
+    max-width: 444.77px !important;
+    padding: 28px;
+}
+
+.hero-section .container-inner .display-notice {
+    display: flex;
+    line-height: 1.5;
+    font-size: 15.4px;
+}
+
+.hero-section .container-inner .display-notice em {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.hero-section .container-inner .display-slogan {
+    font-size: 34.2px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    padding: 0;
+    display: flex;
+}
+
+.hero-section .btn {
+    background-color: black;
+    border-radius: 0;
+    width: 169px;
+    height: 45px;
+    font-size: 14px;
+    color: white;
+}
+
+.product-showcase {
+    height: 816px;
+    background-color: blanchedalmond;
+}
+
+.two-columns {
+    height: 917px;
+    background-color: aliceblue;
+}
+
+.two-columns .btn {
+    background-color: black;
+    border-radius: 0;
+    width: 169px;
+    height: 45px;
+    font-size: 14px;
+    color: white;
+}
+
+.two-columns * {
+    padding-right: 0;
+}
+
+.two-columns .container {
+    max-width: none;
+    padding: 0;
+}
+
+.two-columns .container-fluid {
+    padding: 0;
+}
+
+.two-columns .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two-columns .col button {
+    position: absolute;
+}
+
+.two-columns .col img {
+    height: auto;
+    width: inherit;
+}
+
+.two-columns .row {
+    margin: 0 !important;
+}
+
+.anua-original {
+    height: 485px;
+    background-color: azure;
+}
+
+.radiant-serum-duo {
+    height: 685px;
+    background-color: floralwhite;
+    display: block;
+    justify-content: center;
+}
+
+.radiant-serum-duo .container-wrapper {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.radiant-serum-duo .container {
+    max-width: 61.25rem;
+    width : 100%;
+    height: 100%;
+    padding: 0;
+}
+
+.radiant-serum-duo .row{
+    width: 100%;
+    margin: 0;
+}
+
+
+.help-faq {
+    height: 401px;
+    background-color: tan;
+    margin: 64px 0;
+    border-color: grey;
+}
+
+.help-faq .accordion {
+    --bs-accordion-active-color: none !important;
+    --bs-accordion-border-color: none !important;
+    --bs-accordion-active-bg: none !important;
+    --bs-accordion-border-color: none !important;
+}
+
+.help-faq .accordion-button {
+    padding: 16px 0;
+}
+
+.help-faq .accordion-body {
+    padding: 0 0;
+}
+
+.help-faq .accordion-display {
+    font-size: 19.4px;
+    font-weight: 500;
+    padding: 24px 0;
+}
+
+.help-faq .accordion-button {
+    font-size: 17px;
+    font-weight: 400;
+    padding: 24px 0;
+}
+
+.help-faq .accordion-body {
+    font-size: 15px;
+}
+
+.help-faq .container {
+    width: 650px;
+}
+
+.title-heading {
+    font-weight: 600;
+    font-size: 35.2px;
+}
+
+/*# sourceMappingURL=index.css.map */

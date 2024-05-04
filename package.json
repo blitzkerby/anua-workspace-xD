@@ -2,9 +2,9 @@
   "name": "anua-workspace-xd-main",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel ./src/pages/index.html"
+    "dev": "parcel ./src/pages/index.html",
+    "build": "parcel build ./src/pages/index.html"
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +13,7 @@
     "parcel": "^2.12.0"
   },
   "dependencies": {
-    "bootstrap": "^5.3.3"
+    "bootstrap": "^5.3.3",
+    "sass": "^1.76.0"
   }
 }

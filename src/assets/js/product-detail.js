@@ -1,3 +1,5 @@
+import * as bootstrap from "bootstrap";
+
 /********************* review tab function */
 const review_tab = document.getElementById("review-tab");
 const question_tab = document.getElementById("question-tab");

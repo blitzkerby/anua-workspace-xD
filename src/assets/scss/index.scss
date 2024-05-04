@@ -1,4 +1,30 @@
 @use './header.scss' as custom-accordion-styles; // Assuming the file is named mixins.scss
+// @import "~bootstrap/scss/bootstrap";
+
+
+$generic_paragraph_font_size : 15px;
+
+
+
+.display-notice{
+  display: flex;
+  line-height: 1.5;
+  font-size: 15.4px;
+
+  em{
+    font-weight: 700;
+    margin-right: 5px;
+  }
+  }
+
+  .display-slogan{
+    font-size: 34.2px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    padding: 0;
+    display: flex;
+  }
+
 
 @mixin square-button-style{
   .btn{
@@ -37,76 +63,120 @@ body{
 
 //--v-- hero section --v--
 .hero-section{
-  max-height: 964px;
-  background-color: beige;
+    // max-height: 964px;
+    background-color: beige;
+    height: 2000px;
+    display: block;
 
 
-  img{
-    max-height: inherit;
-    width: inherit;
-    height: auto;
-    position: relative;
-  }
+    img{
+        max-height: inherit;
+        width: inherit;
+        height: auto;
+        position: relative;
+    }
   // background: url("../images/home/Anua-main-banner.webp") center no-repeat;
   // background-size: cover;
 
 
-  .container-wrapper{
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.8);
-    max-width: none !important;
+    .container-wrapper{
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        max-width: none !important;
 
-    display:flex;
-    justify-content: flex-start;
-    align-items: flex-end;
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-end;
 
-    .row{
-      margin: 0 !important;
-    }
-  }
-
-  .container-inner{
-    position: absolute;
-    width: 100%;
-    max-width: 444.77px !important;
-    padding: 28px;
-    // height: 138.58px;
-
-
-    .display-notice{
-      display: flex;
-      line-height: 1.5;
-      font-size: 15.4px;
-
-      em{
-        font-weight: 700;
-        margin-right: 5px;
-      }
+        row{
+            margin: 0 !important;
+        }
     }
 
-    .display-slogan{
-      font-size: 34.2px;
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      padding: 0;
-      display: flex;
+    .container-inner{
+        position: absolute;
+        width: 100%;
+        padding: 28px;
     }
-  }
 
-  @include square-button-style;
+    .carousel-item{
+        z-index: 0;
+        transform: none;
+        img{
+            animation: zoom-out 1s ease-in-out !important;
+        }
+
+        .container-inner{
+            animation: slide-down 1s ease-in-out !important;
+        }
+    }
+    
+
+    .carousel-item .active{
+        z-index: 10;
+    }
+
+
+    @include square-button-style;
 }
 
 
 
+circle{
+    fill:none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    opacity: 0.5;
+}
+
+.circle-animation{
+    animation: progression 5s linear infinite;
+}
+
+@keyframes progression {
+    from {
+      stroke-dashoffset: 472;  /* Start with the entire dash hidden */
+    }
+    to {
+      stroke-dashoffset: 0;  /* Animate to show the entire dash (full progress) */
+    }
+}
+
+@keyframes zoom-out {
+  from { transform: scale(1.5); }
+  to { transform: scale(1); }
+}
+
+@keyframes slide-down {
+  from { transform: translateY(300px); }
+  to { transform: translateY(0); }
+}
+
+
+
+circle .active{
+    opacity: 1;
+}
 //--^-- hero section --^--
 
 
 
 //--v-- product showcase section --v--
 .product-showcase{
-  height: 816px;
+  // min-height: 816px;
   background-color: blanchedalmond;
+
+  .card-section-container{
+    overflow-x: scroll;
+  }
+
+  .row{
+    min-width: 1000px;
+
+  }
 }
 //--v-- product showcase section --v--
 
@@ -121,7 +191,7 @@ body{
   }
   
   
-  height: 917px;
+  // min-height: 917px;
   background-color: aliceblue;
 
   .container{
@@ -159,10 +229,41 @@ body{
 
 //--v-- anua's original --v--
 .anua-original{
-  height: 485px;
+  display: flex;
+  justify-content: center;
+
+  // height: 100%;
+  // height: 485px;
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+
+  
   background-color: azure;
+  .container-wrapper{
+    max-width: 1150px;
+    width: 100%;
+    display: inherit;
+    justify-content: inherit;
+
+  }
+
+  .img-container{
+    width: 57%;
+    background-color: rgb(191, 255, 178);
+  }
+
+  .text-container{
+    width: 43%;
+    background-color: rgb(255, 187, 178);
+  }
 }
 //--^-- anua's original --^--
+
+
+
 
 
 
@@ -171,6 +272,43 @@ body{
 .radiant-serum-duo{
   height: 685px;
   background-color: floralwhite;
+  display: block;
+  justify-content: center;
+
+  img{
+    max-width: 550px;
+  }
+
+  .container-wrapper {
+    width: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .square-showcase{
+    max-width: 550px;
+    width: 100%;
+    
+    // width:550px;
+    height:550px;
+    background-color: aquamarine;
+  }
+
+  .item-toggle{
+    width:270px;
+    margin-left: 77.5px;
+    height:auto;
+    background-color: cornflowerblue;
+  }
+
+  .rating{
+    display: flex;
+  }
+
+  .stars{
+    margin-right: 30px;
+  }
 }
 //--^-- radiant serum duo --^--
 
@@ -182,7 +320,7 @@ body{
 //--v-- help faq --v--
 
 .help-faq{
-  height: 401px;
+  // height: 401px;
   background-color: tan;
   margin: 64px 0;
 
@@ -205,7 +343,7 @@ body{
   }
 
   .accordion-body{
-    font-size: 15px;
+    font-size: $generic_paragraph_font_size;
   }
 
   .container{

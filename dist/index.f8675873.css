@@ -13,6 +13,7 @@
   grid-template-columns: minmax(0, 1fr);
   align-content: start;
   row-gap: 1rem;
+  max-width: 331.694px;
   display: grid;
 }
 

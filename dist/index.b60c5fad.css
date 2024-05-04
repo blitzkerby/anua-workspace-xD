@@ -13400,6 +13400,25 @@ header {
   margin-top: 35px;
 }
 
+.display-notice {
+  font-size: 15.4px;
+  line-height: 1.5;
+  display: flex;
+}
+
+.display-notice em {
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+.display-slogan {
+  letter-spacing: -.5px;
+  padding: 0;
+  font-size: 34.2px;
+  font-weight: 600;
+  display: flex;
+}
+
 * :before, :after {
   box-sizing: border-box;
   margin: 0;
@@ -13415,7 +13434,8 @@ body {
 
 .hero-section {
   background-color: beige;
-  max-height: 964px;
+  height: 2000px;
+  display: block;
 }
 
 .hero-section img {
@@ -13435,7 +13455,7 @@ body {
   max-width: none !important;
 }
 
-.hero-section .container-wrapper .row {
+.hero-section .container-wrapper row {
   margin: 0 !important;
 }
 
@@ -13443,26 +13463,23 @@ body {
   width: 100%;
   padding: 28px;
   position: absolute;
-  max-width: 444.77px !important;
 }
 
-.hero-section .container-inner .display-notice {
-  font-size: 15.4px;
-  line-height: 1.5;
-  display: flex;
+.hero-section .carousel-item {
+  z-index: 0;
+  transform: none;
 }
 
-.hero-section .container-inner .display-notice em {
-  margin-right: 5px;
-  font-weight: 700;
+.hero-section .carousel-item img {
+  animation: 1s ease-in-out zoom-out !important;
 }
 
-.hero-section .container-inner .display-slogan {
-  letter-spacing: -.5px;
-  padding: 0;
-  font-size: 34.2px;
-  font-weight: 600;
-  display: flex;
+.hero-section .carousel-item .container-inner {
+  animation: 1s ease-in-out slide-down !important;
+}
+
+.hero-section .carousel-item .active {
+  z-index: 10;
 }
 
 .hero-section .btn {
@@ -13474,14 +13491,67 @@ body {
   font-size: 14px;
 }
 
+circle {
+  fill: none;
+  stroke: url("#GradientColor");
+  stroke-width: 20px;
+  stroke-dasharray: 472;
+  stroke-dashoffset: 472px;
+  opacity: .5;
+}
+
+.circle-animation {
+  animation: 5s linear infinite progression;
+}
+
+@keyframes progression {
+  from {
+    stroke-dashoffset: 472px;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes zoom-out {
+  from {
+    transform: scale(1.5);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(300px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+circle .active {
+  opacity: 1;
+}
+
 .product-showcase {
   background-color: #ffebcd;
-  height: 816px;
+}
+
+.product-showcase .card-section-container {
+  overflow-x: scroll;
+}
+
+.product-showcase .row {
+  min-width: 1000px;
 }
 
 .two-columns {
   background-color: #f0f8ff;
-  height: 917px;
 }
 
 .two-columns .btn {
@@ -13527,18 +13597,75 @@ body {
 
 .anua-original {
   background-color: azure;
-  height: 485px;
+  justify-content: center;
+  display: flex;
+}
+
+.anua-original img {
+  width: 100%;
+  height: auto;
+}
+
+.anua-original .container-wrapper {
+  display: inherit;
+  justify-content: inherit;
+  width: 100%;
+  max-width: 1150px;
+}
+
+.anua-original .img-container {
+  background-color: #bfffb2;
+  width: 57%;
+}
+
+.anua-original .text-container {
+  background-color: #ffbbb2;
+  width: 43%;
 }
 
 .radiant-serum-duo {
   background-color: #fffaf0;
+  justify-content: center;
   height: 685px;
+  display: block;
+}
+
+.radiant-serum-duo img {
+  max-width: 550px;
+}
+
+.radiant-serum-duo .container-wrapper {
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 50px;
+  display: flex;
+}
+
+.radiant-serum-duo .square-showcase {
+  background-color: #7fffd4;
+  width: 100%;
+  max-width: 550px;
+  height: 550px;
+}
+
+.radiant-serum-duo .item-toggle {
+  background-color: #6495ed;
+  width: 270px;
+  height: auto;
+  margin-left: 77.5px;
+}
+
+.radiant-serum-duo .rating {
+  display: flex;
+}
+
+.radiant-serum-duo .stars {
+  margin-right: 30px;
 }
 
 .help-faq {
   background-color: tan;
   border-color: gray;
-  height: 401px;
   margin: 64px 0;
 }
 

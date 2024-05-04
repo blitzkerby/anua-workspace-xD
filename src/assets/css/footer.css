@@ -8,13 +8,14 @@
       flex-wrap: wrap;
       display: flex;
   }
-  .inner-stack{
-      /* margin-top: 0.625rem;
+  .inner-stack {
+    /* margin-top: 0.625rem;
       margin-bottom: 0.625rem; */
-      row-gap: 1rem;
-      grid-template-columns: minmax(0, 1fr);
-      align-content: start;
-      display: grid;
+    row-gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: start;
+    display: grid;
+    max-width: 331.69420360px;
   }
   .inner-stack .list-style a:hover{
     color: black;
